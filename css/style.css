@@ -1,0 +1,36 @@
+body {
+  /* font-family: 'Source'; */
+  
+  
+};
+
+/* HEADER*/
+
+h1 {
+  background-color: #AC1919;
+  color: #000000;
+}
+
+main input, main button {
+  padding: 4px;
+  border-radius: 9px;
+  margin: 2px 5px;
+}
+
+
+/* MAIN*/
+
+.target-list {
+  background-image: url(https://master.opitec.com/out/pictures/master/product/1/425212-02-z.jpg);
+  border-radius: 9px;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+.target ul li {
+  border-bottom: 2px solid #000000;
+}
+
+.target ul li i{
+  cursor: pointer;
+}

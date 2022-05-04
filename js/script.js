@@ -25,12 +25,42 @@ Predisporre un campo di input testuale e un pulsante “aggiungi”: cliccando s
 
 const app = new Vue({
 
+  el: '#app',
+
   data: {
+    targets: [
+    {
+      text: 'Comprare una PS5',
+      done: 'false'
+    },
+    {
+      text: 'Comprare una PS5',
+      done: 'false'
+    },
+    {
+      text: 'Comprare una PS5',
+      done: 'false'
+    },
+    {
+      text: 'Comprare una PS5',
+      done: 'false'
+    }
+    ],
+    newTarget: '',
 
   },
 
   methods: {
+    addTarget() {
+      if(this.newTarget.text.length > 2) {
+        this.targets.push(this.newTarget);
+        this.newTarget = '';
+      }
+    },
 
+    removeTarget(index) {
+      this.targets.splice(index, 1);
+    }
   },
   
 
