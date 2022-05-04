@@ -31,20 +31,13 @@ const app = new Vue({
     targets: [
     {
       text: 'Comprare una PS5',
-      done: 'false'
+      done: 'false',
     },
     {
-      text: 'Comprare una PS5',
-      done: 'false'
+      text: 'Imparare a memotia JS puro',
+      done: 'false',
     },
-    {
-      text: 'Comprare una PS5',
-      done: 'false'
-    },
-    {
-      text: 'Comprare una PS5',
-      done: 'false'
-    }
+    
     ],
     newTarget: '',
 
@@ -52,8 +45,14 @@ const app = new Vue({
 
   methods: {
     addTarget() {
-      if(this.newTarget.text.length > 2) {
-        this.targets.push(this.newTarget);
+
+      addNewTarget = {
+        text: this.newTarget,
+        done: false
+      }
+
+      if(this.newTarget.length >= 4) {
+        this.targets.push(addNewTarget);
         this.newTarget = '';
       }
     },

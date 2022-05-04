@@ -1,8 +1,7 @@
-body {
-  /* font-family: 'Source'; */
+/* body {
+  font-family: 'Source';
   
-  
-};
+}; */
 
 /* HEADER*/
 
@@ -31,6 +30,10 @@ main input, main button {
   border-bottom: 2px solid #000000;
 }
 
-.target ul li i{
+.target ul li i {
   cursor: pointer;
+}
+
+.done {
+  text-decoration: line-through;
 }

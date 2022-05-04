@@ -31,8 +31,12 @@
 
     <main>
       <div class="text-center">
+        
+        <input @keyup.enter="AddTarget()"
+               v-model="newTarget" 
+               placeholder="Inserisci obiettivo"
+               type="text">
 
-        <input v-model="newTarget" placeholder="Inserisci obiettivo"></input>
         <button @click="addTarget()">Aggiungi</button>
 
       </div>
@@ -41,10 +45,11 @@
 
         
         <div class="target">
-          <ul >
+          <ul>
             <li class="d-flex justify-content-between align-content-center mt-2"
                 v-for="(target, index) in targets">
-              {{target.text}}
+                <span class="">{{target.text}}</span>
+              
 
               <i @click="removeTarget(index)" class="fa-regular fa-circle-xmark"></i>
             </li>
