@@ -31,10 +31,14 @@ const app = new Vue({
     targets: [
     {
       text: 'Comprare una PS5',
+      done: 'true',
+    },
+    {
+      text: 'Imparare a memoria JS puro',
       done: 'false',
     },
     {
-      text: 'Imparare a memotia JS puro',
+      text: 'Effettuare il tagliando alla Lamborghini',
       done: 'false',
     },
     
@@ -47,8 +51,9 @@ const app = new Vue({
     addTarget() {
 
       addNewTarget = {
+        // qui il this mi serve per prendere la variabile "newTarget" in data
         text: this.newTarget,
-        done: false
+        done: true
       }
 
       if(this.newTarget.length >= 4) {

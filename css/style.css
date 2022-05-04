@@ -3,6 +3,10 @@
   
 }; */
 
+body {
+  background-image: url(https://hips.hearstapps.com/esquireuk.cdnds.net/15/37/original/original-detective-crazy-wall-43-jpg-f48b090a.jpg);
+}
+
 /* HEADER*/
 
 h1 {
@@ -30,7 +34,7 @@ main input, main button {
   border-bottom: 2px solid #000000;
 }
 
-.target ul li i {
+.target ul li i, .target ul li span {
   cursor: pointer;
 }
 

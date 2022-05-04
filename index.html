@@ -32,37 +32,39 @@
     <main>
       <div class="text-center">
         
-        <input @keyup.enter="AddTarget()"
-               v-model="newTarget" 
-               placeholder="Inserisci obiettivo"
-               type="text">
+        <input  @keyup.enter="AddTarget"
+                v-model.trim="newTarget" 
+                type="text"
+                placeholder="Inserisci obiettivo">
 
         <button @click="addTarget()">Aggiungi</button>
 
       </div>
+      
 
       <div class="target-list ">
-
-        
         <div class="target">
-          <ul>
+
+          <ul v-if="targets.length > 0">
             <li class="d-flex justify-content-between align-content-center mt-2"
                 v-for="(target, index) in targets">
-                <span class="">{{target.text}}</span>
-              
 
-              <i @click="removeTarget(index)" class="fa-regular fa-circle-xmark"></i>
+                <!-- Un operatore ternario consente di assegnare un valore alla variabile se la condizione è vera e un altro valore se la condizione è falsa. -->
+                  <span @click="target.done = !target.done" :class="target.done === false ? 'done': ' '">{{target.text}}</span>
+                  <i @click="removeTarget(index)" class="fa-regular fa-circle-xmark"></i>
+
             </li>
           </ul>
+
+          <h3 v-else>Hai completato tutti gli obiettivi</h3>
+
         </div>
-        
-
       </div>
-
 
     </main>
 
     <footer></footer>
+    
   </div>
 
   <script src="js/script.js"></script>
